@@ -1,0 +1,12 @@
+<div class="resultados-container">
+    <h2>Hola, {{ nombreCompleto }}</h2>
+  
+    <p>{{ edad }} años y tu signo zodiacal chino es {{ signoChino }}</p>
+  
+    <img [src]="imagenSignoChino" alt="Signo Chino">
+  
+    <p>Calificación: {{ puntuacion }}/5</p>
+    <br><br>
+    <button (click)="irAInicio()">Inicio</button>
+  </div>
+  

@@ -1,0 +1,62 @@
+<div class="container mt-4">
+    <h2 class="text-center mb-4">Datos Personales</h2>
+  
+    <div class="form-group">
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" class="form-control" [(ngModel)]="nombre" />
+    </div>
+  
+    <div class="form-group">
+        <label for="apaterno">Apellido paterno</label>
+        <input type="text" id="apaterno" class="form-control" [(ngModel)]="apaterno" />
+      </div>
+      
+      <div class="form-group">
+        <label for="amaterno">Apellido materno</label>
+        <input type="text" id="amaterno" class="form-control" [(ngModel)]="amaterno" />
+      </div>
+  
+    
+      <h2 class="text-center mb-4">Fecha de Nacimiento</h2>
+
+      <div class="form-row">
+        <div class="form-group col-10">
+          <label for="dia">Día</label>
+          <select id="dia" class="form-control" [(ngModel)]="dia">
+            <option *ngFor="let d of dias">{{ d }}</option>
+          </select>
+          <span></span>
+          <label for="mes">Mes</label>
+          <select id="mes" class="form-control" [(ngModel)]="mes">
+            <option *ngFor="let m of meses">{{ m }}</option>
+          </select>
+          <span></span>
+          <label for="ano">Año</label>
+          <select id="ano" class="form-control" [(ngModel)]="ano">
+            <option *ngFor="let a of anos">{{ a }}</option>
+          </select>
+        </div>
+      </div>
+      
+  
+    <!-- Otros campos... -->
+  
+    <h2 class="text-center mb-4">Sexo</h2>
+
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" [(ngModel)]="sexo" value="Hombre" id="hombreCheck">
+  <label class="form-check-label" for="hombreCheck">Hombre</label>
+</div>
+
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" [(ngModel)]="sexo" value="Mujer" id="mujerCheck">
+  <label class="form-check-label" for="mujerCheck">Mujer</label>
+</div>
+
+<div class="text-center mt-4">
+  <button class="btn btn-secondary mr-2" (click)="limpiar()">Limpiar</button>
+  <button class="btn btn-primary" (click)="siguiente()">Siguiente</button>
+</div>
+
+  </div>
+  

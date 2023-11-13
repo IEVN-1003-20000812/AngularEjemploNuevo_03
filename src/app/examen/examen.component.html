@@ -1,0 +1,18 @@
+<div class="container">
+    <h2 class="text-center mb-4">Examen</h2>
+  
+    <div class="pregunta" *ngFor="let pregunta of preguntas; let i = index">
+      <p>{{ i + 1 }}. {{ pregunta.enunciado }}</p>
+      <div class="opciones">
+        <div *ngFor="let opcion of pregunta.opciones">
+          <input type="radio" name="pregunta{{ i }}" [(ngModel)]="pregunta.respuesta" [value]="opcion.letra" />
+          <label>{{ opcion.letra }} {{ opcion.texto }}</label>
+        </div>
+      </div>
+    </div>
+  
+    <div class="text-center mt-4">
+      <button class="btn btn-primary" (click)="verPuntuacion()">Ver Puntuación</button>
+    </div>
+  </div>
+  
